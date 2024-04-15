@@ -70,8 +70,8 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
-        wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/${{ env.CLANG_BRANCH }}/clang-${{ env.CLANG_VERSION }}.tar.gz
-        tar -C clang-aosp/ -zxvf clang-${{ env.CLANG_VERSION }}.tar.gz
+        wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/7878f5d2678c0ef2d9e61bba82ca8d4f3c8a83f0/clang-r450784d.tar.gz
+        tar -C clang-aosp/ -zxvf clang-r450784d.tar.gz
 
     - name: 下载Custom-Clang编译器
       if: env.USE_CUSTOM_CLANG == 'true'
