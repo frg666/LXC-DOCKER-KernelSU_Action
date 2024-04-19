@@ -55,6 +55,7 @@ jobs:
     - name: 下载mkbootimg解包工具
       if: env.BUILD_BOOT_IMG == 'true'
       run: |
+        mkdir -p $GITHUB_WORKSPACE/kernel_workspace
         cd $GITHUB_WORKSPACE/kernel_workspace
         git clone https://android.googlesource.com/platform/system/tools/mkbootimg tools -b master-kernel-build-2022 --depth=1
 
